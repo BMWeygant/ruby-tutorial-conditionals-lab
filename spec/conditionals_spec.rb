@@ -8,15 +8,10 @@ describe '#ghosts_audible' do
     end
   
     it "reminds you Le'Veon Bell is a beast on a hb screen." do
-      expect(ghosts_audible("screen pass")).to eq "Le'Veon Bell is a beast! TD Jets!"
+      expect(ghosts_audible("hb screen")).to eq "Le'Veon Bell is a beast! TD Jets!"
     end
   
     it "will cause an int if any other play is called." do
       expect(ghosts_audible("play action pass")).to eq "Another int by Sam!"
     end
-  
-    it 'responds with NO, NOT SINCE 1938! for a second time' do
-      expect(ghosts_audible('WHAT?')).to eq "NO, NOT SINCE 1938!"
-    end
-  
   end
